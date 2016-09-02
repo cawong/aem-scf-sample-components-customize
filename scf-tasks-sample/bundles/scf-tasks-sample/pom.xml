@@ -95,7 +95,7 @@
         <dependency>
             <groupId>com.adobe.cq.social</groupId>
             <artifactId>cq-socialcommunities-api</artifactId>
-            <version>1.8.269</version>
+            <version>1.8.386</version>
             <scope>provided</scope>
         </dependency>        
         <dependency>

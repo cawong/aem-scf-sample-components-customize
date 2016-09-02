@@ -9,6 +9,8 @@
  **************************************************************************/
 package com.adobe.cq.social.samples.scf.tasks.api;
 
+import java.util.List;
+
 import com.adobe.cq.social.scf.SocialComponent;
 import com.adobe.cq.social.scf.User;
 
@@ -34,4 +36,20 @@ public interface ProjectSocialComponent extends SocialComponent {
      * @return the owner of the project as a {@link User}
      */
     User getOwner();
+
+    /**
+     * @return a list of badges for the owner of this resource
+     */
+    List<String> getBadges();
+
+    /**
+     * Return a single score for the owner given a location and scoring rule. At the component location, e.g.
+     * /content/acme/en/projects/jcr:content/content/taskbox, set the following 2 properties.
+     *
+     * ruleLocation - the location where the scoring rule was configured
+     * scoringRule - the scoring rule that was configured at the above ruleLocation
+     *
+     * @return return the owner's score for the given location and scoring rule
+     */
+    Long getScore();
 }

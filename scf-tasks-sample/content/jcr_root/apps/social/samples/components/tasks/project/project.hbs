@@ -4,5 +4,12 @@
     </span>
     <span class="scf-project-item-owner">{{owner.name}}</span>
     <img class="scf-project-item-owner-img scf-comment-avatar" src = "{{owner.avatarUrl}}" />
+    <br/>
+    Badges:
+    {{#each badges}}
+        <img src = "{{this}}" />
+    {{/each}}
+    &nbsp;
+    Score: {{score}}
     <br style="clear: both;" />
 </div>
